@@ -1,12 +1,13 @@
 package br.edu.kelly.modelo;
 
+import java.sql.Date;
+
 public class Senha {
     private String codigo;
-    private String chegada;
+    private String chegada ;
     private String atendimento;
     private Tipo tipo;
     private Status status;
-    
     public void setCodigo(String codigo){
         this.codigo = codigo;
     }
@@ -39,11 +40,12 @@ public class Senha {
         return status.getDescricao();
     }
     
-    public Senha(String chegada, Tipo tipo, int tamanhoDaFila, Status status){
+    public Senha(Date chegada, Tipo tipo, int tamanhoDaFila, Status status){
         int numero;
-        this.chegada=chegada;
+        this.chegada=chegada.toString();
+        
         this.tipo = tipo;
-        this.atendimento = "9999-12-01";
+        this.atendimento = null;
         this.status =  status;
         numero = ++tamanhoDaFila;
         if(numero <10){ 
@@ -60,11 +62,11 @@ public class Senha {
         }
     }
     
-    public Senha(String codigo,String chegada,String atendimento, Tipo tipo, Status status){
+    public Senha(String codigo, String chegada, Tipo tipo, Status status){
         this.codigo = codigo;
-        this.chegada=chegada;
+        this.chegada= chegada;
         this.tipo = tipo;
-        this.atendimento = atendimento;
+       // this.atendimento = atendimento;
         this.status =  status;
     }
     

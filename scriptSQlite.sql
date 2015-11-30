@@ -1,2 +1,1 @@
-CREATE TABLE senhas(id INTEGER primary key AUTOINCREMENT , codigo VARCHAR(5), chegada DATE, atendimento DATE, status_atendimento VARCHAR(20), tipo_senha VARCHAR(20));
-
+CREATE TABLE senhas(id INTEGER primary key AUTOINCREMENT , codigo VARCHAR(15), chegada VARCHAR(15), atendimento VARCHAR(15), status_atendimento VARCHAR(20), tipo_senha VARCHAR(20));
