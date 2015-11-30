@@ -1,6 +1,6 @@
-package br.edu.kelly.telas;
+package br.edu.kelly.visao;
 
-import br.edu.kelly.modelo.Fila;
+import br.edu.kelly.controle.Fila;
 
 public class Tela01GUI extends javax.swing.JFrame {
     private Fila fila;
@@ -27,7 +27,7 @@ public class Tela01GUI extends javax.swing.JFrame {
         jbEntrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/257.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/257.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 204, 255));
@@ -35,7 +35,7 @@ public class Tela01GUI extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(400, 400));
         jLabel2.setMinimumSize(new java.awt.Dimension(400, 400));
         jLabel2.setPreferredSize(new java.awt.Dimension(400, 400));
@@ -52,7 +52,7 @@ public class Tela01GUI extends javax.swing.JFrame {
         getContentPane().add(jbEntrar);
         jbEntrar.setBounds(30, 290, 110, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/257.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/257.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(400, 400));
         jLabel1.setMinimumSize(new java.awt.Dimension(400, 400));

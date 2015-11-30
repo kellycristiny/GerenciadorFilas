@@ -1,7 +1,7 @@
-package br.edu.kelly.telas;
+package br.edu.kelly.visao;
 
-import br.edu.kelly.modelo.Fila;
-import br.edu.kelly.modelo.Senha;
+import br.edu.kelly.controle.Fila;
+import br.edu.kelly.controle.Senha;
 
 public class Tela03GUI extends javax.swing.JFrame {
     private Fila f;
@@ -58,7 +58,7 @@ public class Tela03GUI extends javax.swing.JFrame {
         getContentPane().add(jtMinhaSenha);
         jtMinhaSenha.setBounds(100, 80, 120, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(280, 280, 120, 70);
 
@@ -87,7 +87,7 @@ public class Tela03GUI extends javax.swing.JFrame {
         getContentPane().add(jtPessoasFrente);
         jtPessoasFrente.setBounds(161, 122, 90, 20);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/257.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/257.jpg"))); // NOI18N
         jLabel4.setMaximumSize(new java.awt.Dimension(400, 400));
         jLabel4.setMinimumSize(new java.awt.Dimension(400, 400));
         jLabel4.setPreferredSize(new java.awt.Dimension(400, 400));

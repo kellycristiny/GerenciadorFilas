@@ -1,7 +1,7 @@
-package br.edu.kelly.modelo;
+package br.edu.kelly.controle;
 
-import br.edu.kelly.conexao.ConexaoSqlite;
-import br.edu.kelly.telas.*;
+import br.edu.kelly.visao.Tela01GUI;
+import br.edu.kelly.modelo.ConexaoSqlite;
 import java.sql.SQLException;
 
 import java.util.logging.Level;

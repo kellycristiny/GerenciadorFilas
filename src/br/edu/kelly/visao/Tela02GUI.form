@@ -152,7 +152,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/edu/kelly/telas/1_Primary_logo_on_transparent_114x75.png"/>
+          <Image iconType="3" name="/br/edu/kelly/visao/1_Primary_logo_on_transparent_114x75.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -176,7 +176,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/edu/kelly/telas/257.jpg"/>
+          <Image iconType="3" name="/br/edu/kelly/visao/257.jpg"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 400]"/>

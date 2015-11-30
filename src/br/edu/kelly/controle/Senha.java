@@ -1,4 +1,4 @@
-package br.edu.kelly.modelo;
+package br.edu.kelly.controle;
 
 import java.sql.Date;
 

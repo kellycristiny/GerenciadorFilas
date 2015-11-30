@@ -1,7 +1,7 @@
-package br.edu.kelly.telas;
+package br.edu.kelly.visao;
 
-import br.edu.kelly.modelo.Fila;
-import br.edu.kelly.modelo.Senha;
+import br.edu.kelly.controle.Fila;
+import br.edu.kelly.controle.Senha;
 import javax.swing.JOptionPane;
 
 public class Tela02GUI extends javax.swing.JFrame {
@@ -35,6 +35,7 @@ public class Tela02GUI extends javax.swing.JFrame {
         jFrame1.setBackground(new java.awt.Color(153, 204, 255));
         jFrame1.setResizable(false);
 
+
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
         jFrame1Layout.setHorizontalGroup(
@@ -49,10 +50,6 @@ public class Tela02GUI extends javax.swing.JFrame {
                 .addContainerGap(153, Short.MAX_VALUE)
                 .addGap(122, 122, 122))
         );
-
-        jFrame2.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        jFrame2.setBackground(new java.awt.Color(153, 204, 255));
-        jFrame2.setResizable(false);
 
 
         javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
@@ -91,7 +88,7 @@ public class Tela02GUI extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(150, 60, 110, 40);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/1_Primary_logo_on_transparent_114x75.png"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(280, 290, 110, 70);
 
@@ -99,7 +96,7 @@ public class Tela02GUI extends javax.swing.JFrame {
         getContentPane().add(jtDigitar);
         jtDigitar.setBounds(140, 110, 160, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/telas/257.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/kelly/visao/257.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(400, 400));
         jLabel1.setMinimumSize(new java.awt.Dimension(400, 400));
         jLabel1.setPreferredSize(new java.awt.Dimension(400, 400));

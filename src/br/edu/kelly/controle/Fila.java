@@ -1,5 +1,5 @@
 //teste01
-package br.edu.kelly.modelo;
+package br.edu.kelly.controle;
 
 import java.util.ArrayList;
 

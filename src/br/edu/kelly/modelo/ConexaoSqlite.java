@@ -1,9 +1,9 @@
-package br.edu.kelly.conexao;
+package br.edu.kelly.modelo;
 
-import br.edu.kelly.modelo.Fila;
-import br.edu.kelly.modelo.Senha;
-import br.edu.kelly.modelo.Status;
-import br.edu.kelly.modelo.Tipo;
+import br.edu.kelly.controle.Fila;
+import br.edu.kelly.controle.Senha;
+import br.edu.kelly.controle.Status;
+import br.edu.kelly.controle.Tipo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
