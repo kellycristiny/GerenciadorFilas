@@ -63,7 +63,7 @@ public class Main {
         System.out.println(s4.getCodigo());
          */
         try {
-            ConexaoSqlite con = new ConexaoSqlite("C:src\\br\\edu\\kelly\\conexao\\fila_db.db");
+            ConexaoSqlite con = new ConexaoSqlite("fila_db");
             con.initDB();
             Fila fila;
             con.insert(s1);
