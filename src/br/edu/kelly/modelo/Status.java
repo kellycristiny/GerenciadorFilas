@@ -8,12 +8,12 @@ public class Status {
   public Status(String s){
       this.descricao = s;
   }
+  
+  public void setDescricao(String descricao){
+      this.descricao = descricao;
+  }
 
   public String getDescricao() {
       return descricao;
-  }
-
-  public void setEstado(String s) {
-      this.descricao = s;
   }
 }

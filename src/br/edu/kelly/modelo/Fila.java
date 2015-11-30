@@ -7,6 +7,7 @@ public class Fila {
     private final ArrayList<Senha> fila = new <Senha>ArrayList();
     private Tipo tipo;
    
+    public Fila(){}
     
     public Fila(Tipo tipo){
         this.tipo=tipo;
@@ -21,11 +22,11 @@ public class Fila {
     }
     
     public boolean adicionarNaFila(Senha s){
-        if(s.getTipo() == tipo){
+        //if(s.getTipo().equals(tipo.getDescricao())){
            fila.add(s);
            return true;
-        }
-        return false;
+        //}
+        //return false;
     }
     
     public void removerDaFila(Senha s){

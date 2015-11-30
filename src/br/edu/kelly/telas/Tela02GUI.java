@@ -5,15 +5,13 @@ import br.edu.kelly.modelo.Senha;
 import javax.swing.JOptionPane;
 
 public class Tela02GUI extends javax.swing.JFrame {
-    private Fila normal, prioridade, fies;
+    private Fila fila;
     /**
      * Creates new form Tela02GUI
      */
-    public Tela02GUI(Fila f1, Fila f2, Fila f3) {
+    public Tela02GUI(Fila fila) {
         initComponents();
-        this.normal = f1;
-        this.prioridade = f2;
-        this.fies = f3;
+        this.fila = fila;
     }
 
     /**
@@ -115,21 +113,11 @@ public class Tela02GUI extends javax.swing.JFrame {
     private void jbAcompanharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAcompanharActionPerformed
         // TODO add your handling code here:
         String s = jtDigitar.getText();
-        Senha senha = normal.senhaPesquisada(s);
+        Senha senha = fila.senhaPesquisada(s);
         if(senha!= null)
-             new Tela03GUI(normal,senha,s).setVisible(true);
+             new Tela03GUI(fila,senha,s).setVisible(true);
         else{
-            senha = prioridade.senhaPesquisada(s);
-            if(senha!= null)
-               new Tela03GUI(prioridade,senha,s).setVisible(true);
-            else{
-                senha = fies.senhaPesquisada(s);
-                if(senha!= null)
-                   new Tela03GUI(fies,senha,s).setVisible(true);
-                else{
-                    JOptionPane.showMessageDialog(null, "Não foi encontrada nenhuma senha com este código e nenhuma das filas!!");
-                }
-            }
+            JOptionPane.showMessageDialog(null, "Não foi encontrada nenhuma senha com este código e nenhuma das filas!!");
         }
     }//GEN-LAST:event_jbAcompanharActionPerformed
 

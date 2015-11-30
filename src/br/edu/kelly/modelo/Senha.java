@@ -1,36 +1,50 @@
-
 package br.edu.kelly.modelo;
 
-import java.util.Date;
-
 public class Senha {
-    private final String codigo;
-    private final Date horaChegada;
-    private Date horaAtendimento;
+    private String codigo;
+    private String chegada;
+    private String atendimento;
     private Tipo tipo;
     private Status status;
+    
+    public void setCodigo(String codigo){
+        this.codigo = codigo;
+    }
     
     public String getCodigo(){
         return codigo;
     }
-   
+    
+    public String getChegada(){
+        return chegada;
+    }
+    
+    public void setChegada(String chegada){
+        this.chegada = chegada;
+    }
+    
+    public String getAtendimento(){
+        return atendimento;
+    }
 
-    public void setHoraAtendimento(Date horaAtendimento){
-        this.horaAtendimento=horaAtendimento; 
+    public void setAtendimento(String atendimento){
+        this.atendimento = atendimento; 
     }
 
     public void setStatus(Status status){
         this.status=status;
     }
     
-    public Status getStatus(){
-        return status;
+    public String getStatus(){
+        return status.getDescricao();
     }
     
-    public Senha(Date horaChegada, Tipo t, int tamanhoDaFila){
+    public Senha(String chegada, Tipo tipo, int tamanhoDaFila, Status status){
         int numero;
-        this.horaChegada=horaChegada;
-        this.tipo = t;
+        this.chegada=chegada;
+        this.tipo = tipo;
+        this.atendimento = "9999-12-01";
+        this.status =  status;
         numero = ++tamanhoDaFila;
         if(numero <10){ 
             String zeros = "00";
@@ -46,16 +60,23 @@ public class Senha {
         }
     }
     
+    public Senha(String codigo,String chegada,String atendimento, Tipo tipo, Status status){
+        this.codigo = codigo;
+        this.chegada=chegada;
+        this.tipo = tipo;
+        this.atendimento = atendimento;
+        this.status =  status;
+    }
+    
     public void resetSenhas(){
        // numero = 1;
     }
 
-    public Tipo getTipo() {
-        return tipo;
+    public String getTipo() {
+        return tipo.getDescricao();
     }
 
     public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
-       
-}
+ }

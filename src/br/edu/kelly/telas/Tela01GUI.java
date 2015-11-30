@@ -3,15 +3,13 @@ package br.edu.kelly.telas;
 import br.edu.kelly.modelo.Fila;
 
 public class Tela01GUI extends javax.swing.JFrame {
-    private Fila normal, prioridade, fies;
+    private Fila fila;
     /**
      * Creates new form Tela01GUI
      */
-    public Tela01GUI(Fila f1, Fila f2, Fila f3) {
+    public Tela01GUI(Fila fila) {
         initComponents();
-        this.normal = f1;
-        this.prioridade = f2;
-        this.fies = f3;
+        this.fila = fila;
     }
     
 
@@ -67,7 +65,7 @@ public class Tela01GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        new Tela02GUI(normal,prioridade,fies).setVisible(true);      
+        new Tela02GUI(fila).setVisible(true);      
         // TODO add your handling code here:
     }//GEN-LAST:event_jbEntrarActionPerformed
 
