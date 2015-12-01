@@ -14,8 +14,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Tipo n = new Tipo("Norm");
-        Tipo p = new Tipo("Pref");
+        Tipo n = new Tipo("Normal");
+        Tipo p = new Tipo("Prioritaria");
         Tipo f = new Tipo("Fies");
         
         Fila filaNormal = new Fila(n);
@@ -66,12 +66,19 @@ public class Main {
             ConexaoSqlite con = new ConexaoSqlite("fila_db");
             con.initDB();
             Fila fila;
-            con.insert(s1);
-            con.insert(s2);
-            con.insert(s3);
-            con.insert(s4);
-            fila = con.getFila();
-            new Tela01GUI(fila).setVisible(true);
+            con.insertSenha(s2);
+            con.insertSenha(s3);
+            con.insertSenha(s4);
+            
+            TempoAtendimento tempoNormal = new TempoAtendimento("N",2);
+            TempoAtendimento tempoPrioritaria = new TempoAtendimento("P",1);
+            TempoAtendimento tempoFies = new TempoAtendimento("F",8);
+            
+            con.insertTempoAtendimento(tempoFies);
+            con.insertTempoAtendimento(tempoPrioritaria);
+            con.insertTempoAtendimento(tempoNormal);
+            
+            new Tela01GUI().setVisible(true);
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

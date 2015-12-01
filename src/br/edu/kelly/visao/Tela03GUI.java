@@ -7,17 +7,23 @@ public class Tela03GUI extends javax.swing.JFrame {
     private Fila f;
     private Senha s;
     private String cod;
+    private double tempo; 
     
     /**
      * Creates new form Tela03GUI
      */
     
-    public Tela03GUI(Fila f, Senha s, String cod) {
+    public Tela03GUI(Fila f, Senha s, String cod, String t) {
         initComponents();
         this.f = f;
         this.s = s;
+        tempo = Double.parseDouble(t);
         jtMinhaSenha.setText(cod);
+        int qtd = f.qtdSenhasAnteriores(s);
+        double tempoTotal = tempo * qtd;
         jtPessoasFrente.setText(""+f.qtdSenhasAnteriores(s));
+        
+        jtTempoAtendimento.setText(""+tempoTotal+" hs");
     }
 
     /**

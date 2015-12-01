@@ -2,16 +2,21 @@ package br.edu.kelly.visao;
 
 import br.edu.kelly.controle.Fila;
 import br.edu.kelly.controle.Senha;
+import br.edu.kelly.modelo.ConexaoSqlite;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Tela02GUI extends javax.swing.JFrame {
+
     private Fila fila;
+
     /**
      * Creates new form Tela02GUI
      */
-    public Tela02GUI(Fila fila) {
+    public Tela02GUI() {
         initComponents();
-        this.fila = fila;
     }
 
     /**
@@ -109,19 +114,39 @@ public class Tela02GUI extends javax.swing.JFrame {
 
     private void jbAcompanharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAcompanharActionPerformed
         // TODO add your handling code here:
-        String s = jtDigitar.getText();
-        Senha senha = fila.senhaPesquisada(s);
-        if(senha!= null)
-             new Tela03GUI(fila,senha,s).setVisible(true);
-        else{
-            JOptionPane.showMessageDialog(null, "Não foi encontrada nenhuma senha com este código e nenhuma das filas!!");
+        String senhaPesquisada = jtDigitar.getText();
+        String tipo = "" + senhaPesquisada.subSequence(0, 1);
+        String tipoFila = null;
+        try {
+            ConexaoSqlite con = new ConexaoSqlite("fila_db");
+            switch (tipo) {
+                case "N":
+                    tipoFila = "Normal";
+                    break;
+                case "P":
+                    tipoFila = "Prioritaria";
+                    break;
+                case "F":
+                    tipoFila = "Fies";
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Nenhuma senha existente contém este código.\nPor favor digite uam senha válida");
+                    break;
+            }
+            fila = con.getFila(tipoFila);
+            String tempo = con.tempoAtendimento(tipo);
+            
+            Senha senha = fila.senhaPesquisada(senhaPesquisada);
+            if (senha != null) {
+                new Tela03GUI(fila, senha, senhaPesquisada,tempo).setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Não foi encontrada nenhuma senha com este código em nenhuma das filas!!");
+            }
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(Tela02GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }//GEN-LAST:event_jbAcompanharActionPerformed
-
-
-
-
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

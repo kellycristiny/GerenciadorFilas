@@ -3,13 +3,11 @@ package br.edu.kelly.visao;
 import br.edu.kelly.controle.Fila;
 
 public class Tela01GUI extends javax.swing.JFrame {
-    private Fila fila;
     /**
      * Creates new form Tela01GUI
      */
-    public Tela01GUI(Fila fila) {
+    public Tela01GUI() {
         initComponents();
-        this.fila = fila;
     }
     
 
@@ -65,7 +63,7 @@ public class Tela01GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        new Tela02GUI(fila).setVisible(true);      
+        new Tela02GUI().setVisible(true);      
         // TODO add your handling code here:
     }//GEN-LAST:event_jbEntrarActionPerformed
 
